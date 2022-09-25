@@ -153,7 +153,7 @@ function Signup(props) {
     }
 
     return (
-        <div >
+        <div className='loginBackgroundStyle'>
             <div style={{width : window.innerWidth*10/100 , height : window.innerHeight*10/100}} className='logoImage'>
                 <img src={logo} width = '100%' height= '100%' />
             </div>

@@ -12,6 +12,8 @@ function Login(props) {
     const [password , setPassword] = useState('') ;
     const [type , setType] = useState('')
 
+    const [errorMessage , setErrorMessage] = useState(<></>);
+
 
     const options = [
         
@@ -43,11 +45,11 @@ function Login(props) {
 
         axios.post(`http://localhost:8080/${uri}/login` , payload)
             .then(res => alert(JSON.stringify(res.data)))
-            .catch(err => alert(JSON.stringify(err))) ;
+            .catch(err => {console.log(err);setErrorMessage(<p className='errorStyle'>*Invalid username or password</p>)}) ;
     }
 
     return (
-        <div  >
+        <div  className='loginBackgroundStyle'>
             <div style={{width : window.innerWidth*10/100 , height : window.innerHeight*10/100}} className='logoImage'>
                 <img src={logo} width = '100%' height= '100%' />
             </div>
@@ -61,9 +63,10 @@ function Login(props) {
                 <Select placeholder='Admin/User' styles={customStyles} options = {options} onChange = {e => setType(e.value) }  /> 
             </div><br/>
 
-            <input type='text' className='inputStyle' placeholder='Enter username' value={email} onChange={e => {setEmail(e.target.value) ; }}/> <br/> <br/>
+            <input type='text' className='inputStyle' placeholder='Enter email' value={email} onChange={e => {setEmail(e.target.value) ; }}/> <br/> <br/>
             <input type='password' className='inputStyle' placeholder='Enter password' value={password} onChange={e => {setPassword(e.target.value)}}/> <br/> <br/>
 
+            {errorMessage}
             <button onClick={submitForm} style = {{borderRadius : '5px' , }}><b>Submit</b></button><br/><br/>
 
 
