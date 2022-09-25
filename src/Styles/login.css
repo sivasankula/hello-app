@@ -24,14 +24,14 @@
     display: flex ;
     background-color: black;
     width : 100% ;
-    height : 10% 
+    height : 5% ;
+    justify-content: space-around ;
 }
 
 .navbarLinkStyle{
     align-items: center;
     align-content: center;
     align-self: center;
-    width : 33.3333% ;
     height : 100%
 }
 
@@ -45,5 +45,5 @@
 
 .welcomeBackgroundStyle{
     background-image : URL('https://t4.ftcdn.net/jpg/03/19/40/21/360_F_319402179_hpmeoOSrarYOFEMlJCeUZahM6AFogCVD.jpg') !important;
-    
+
 } 
