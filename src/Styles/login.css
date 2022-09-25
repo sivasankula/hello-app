@@ -1,0 +1,36 @@
+.logoImage{
+    position : absolute ;
+    left: 2.5% ;
+}
+
+.errorStyle{
+    font-size : 13px ;
+     color : red ;
+}
+
+.inputStyle{
+    border-radius : 5px ;
+     width:200px ;
+      height : 25px
+}
+
+.textAreaStyle{
+    border-radius : 10px ;
+     width:350px ;
+      height : 50px
+}
+
+.navbarStyle{
+    display: flex ;
+    background-color: black;
+    width : 100% ;
+    height : 10% 
+}
+
+.navbarLinkStyle{
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width : 33.3333% ;
+    height : 100%
+}
